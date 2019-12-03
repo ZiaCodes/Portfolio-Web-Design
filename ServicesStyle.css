@@ -1,0 +1,450 @@
+/* Keyframes */
+
+-webkit-@keyframes typewriter{
+  from{width: 0;}
+  to{width: 290px;}
+}
+-ms-@keyframes typewriter{
+  from{width: 0;}
+  to{width: 290px;}
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 190px;}
+}
+
+-webkit-@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0,0,0,0.8);}
+  to{border-right-color: transparent;}
+}
+-ms-@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0,0,0,0.8);}
+  to{border-right-color: transparent;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0,0,0,0.8);}
+  to{border-right-color: transparent;}
+}
+
+-webkit-@keyframes fadeOutEffect {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+-ms-@keyframes fadeOutEffect {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fadeOutEffect {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/* Typewriter */
+
+.line-1{
+    position: relative;
+    top: 50%; 
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);  
+    border-right: 2px solid black;
+    
+    font-family: Megrim;
+  font-size: 180%;
+  color: rgb(76, 79, 77);
+font-size: 40px;
+  font-weight: 200;
+}
+
+/* Animation */
+.anim-typewriter{
+  -webkit-animation: typewriter 3s steps(15) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+    -ms-animation: typewriter 3s steps(15) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+    -webkit-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+}
+
+
+#loading{
+    z-index: 1000;
+    height: calc (100vh + 40px);
+    width: 100vw;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: white;
+  color: white;
+  opacity: 1;
+  transition: 0.5s;
+  visibility: visible;
+    
+    -webkit-animation: fadeOutEffect;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-delay: 5s;
+    
+    -ms-animation: fadeOutEffect;
+    -ms-animation-duration: 2s;
+    -ms-animation-delay: 5s;
+    
+    animation: fadeOutEffect;
+    animation-duration: 2s;
+    animation-delay: 5s;
+}
+#loading.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+.loading-screen-text {
+     position: relative;
+    top: 43%; 
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);  
+    color: blue;
+    
+    font-family: Megrim;
+  font-size: 40%;
+  color: rgb(76, 79, 77);
+font-size: 25px;
+  font-weight: 200;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.landing {
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgb(247, 247, 247);
+}
+.header-div {
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  -ms-justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-pack: center;
+  -webkit-display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-pack: center;
+}
+.header-div h1 {
+  font-family: Megrim;
+  font-size: 60px;
+  color: rgb(76, 79, 77);
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  font-weight: 200;
+}
+.line {
+  color: rgb(48, 211, 82);
+}
+.motto {
+  width: auto;
+  height: auto;
+  text-align: center;
+  color: rgb(76, 79, 77);
+  font-size: 22px;
+  margin: 10px 0 0 0;
+  padding: 0 10px 25px 10px;
+  border-bottom: .5px solid rgb(217, 217, 217);
+  border-width: thin;
+  font-weight: 200;
+}
+.social-media-container {
+  z-index: 10;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: -ms-flexbox;
+  -ms-flex-direction: row;
+  -ms-justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-pack: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-pack: center;
+}
+.social-media-container a {
+  margin: 0 10px 0 10px;
+}
+.social-media-logo:hover {
+  cursor: grab;
+}
+.social-media-logo {
+  height: 60px;
+  width: 60px;
+  z-index: 10;
+}
+#instagram {
+  height: 60px;
+  width: 60px;
+  margin: -8px;
+}
+#facebook {
+  height: 70px;
+  width: 70px;
+  margin: -10px;
+}
+#twitter {
+  height: 65px;
+  width: 65px;
+  margin: -10px;
+}
+.contact-button {
+  height: 80px;
+  width: 75px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background-color: rgb(45, 210, 81);
+}
+.contact-button p {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  font-family: Poiret One;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+.navigation row {
+  height:
+}
+.navigation ul {
+  -webkit-flex-direction: row;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: -ms-flexbox;
+  -ms-flex-direction: row;
+  -ms-justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-pack: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-pack: center;
+}
+.navigation ul li {
+  margin: 0 15px 0 15px;
+}
+#active-a {
+  color: rgb(45, 210, 81);
+}
+.navigation ul li a {
+  font-size: 20px;
+  color: rgb(76, 79, 77);
+}
+.navigation ul li a:hover {
+  text-decoration: none;
+  color: rgb(45, 210, 81);
+}
+.services-container {
+  z-index: 100;
+  background-color: rgb(45, 210, 81);
+  position: absolute;
+  top: 70vh;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+.services-header {
+  height: 150px;
+}
+.header-text {
+  text-align: center;
+  font-family: Megrim;
+  font-size: 55px;
+}
+.services-header-message {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  padding-top: 30px;
+  font-family: Questrial;
+  font-weight: lighter;
+  padding-bottom: 100px;
+}
+#support-image {
+  width: 100%;
+  height: 200px;
+}
+.services-container-b {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: rgb(247, 247, 247);
+  margin-bottom: -65px;
+  padding-bottom: 40px;
+}
+.design-header {
+  height: 180px;
+}
+.design-p {
+  font-size: 18px;
+  text-align: justify;
+  width: 85%;
+  font-family: Questrial;
+  margin: 0;
+  padding-left: 20px;
+  border-left: 5px solid rgb(150, 233, 168);
+}
+.circle {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 5px 2px 5px 0px;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: -ms-flexbox;
+  -ms-flex-direction: row;
+  -ms-justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-pack: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-pack: center;
+}
+#html-circle, #css-circle, #javascript-circle {
+  position: relative;
+}
+#html-circle img {
+  height: 80%;
+  width: 80%;
+}
+#css-circle img {
+  height: 80%;
+  width: 60%;
+}
+#javascript-circle img {
+  height: 80%;
+  width: 85%;
+}
+.services-container-c {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: rgb(45, 210, 81);
+  padding-bottom: 50px;
+}
+.white-text {
+  color: rgb(247, 247, 247);
+}
+.computer-icon {
+  width: 80%;
+  height: 180px;
+}
+@media screen and (max-width:414px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */
+  }
+    .line-1{
+top: 46%;
+}
+}
+@media screen and (min-width: 500px) {
+  .contact-button {
+    right: 50px;
+  }
+  .design-p {
+    width: 600px;
+  }
+  .services-header-message {
+    width: 600px;
+  }
+  .computer-icon {
+    width: 300px;
+    height: 150px;
+  }
+  .circle-container {
+    margin-top: -40px;
+  }
+  .services-container-b {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .contact-button {
+    right: 10px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .motto {
+    font-size: 20px;
+  }
+  .header-div {
+    margin-top: -60px;
+  }
+  .header-div h1 {
+    font-size: 35px;
+  }
+  .navigation ul li a {
+    font-size: 17px;
+  }
+  .social-media-container a {
+    height: 30px;
+    width: 30px;
+  }
+  .social-media-container {
+    margin: 0;
+    left: 0;
+    width: 90vw;
+  }
+  .contact-button {
+    display: none;
+  }
+  .title-message {
+    font-size: 50px;
+  }
+  .header-text {
+    font-size: 50px;
+  }
+  .computer-icon {
+    width: 80%;
+    height: 160px;
+  }
+  .circle {
+    margin: 0 10px 0 10px;
+  }
+}
