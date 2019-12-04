@@ -419,7 +419,6 @@ body {
   margin: auto;
   box-shadow: 10px 10px 15px 5px #404040;
   border-radius: 5px;
-  transform: scaleY(0.5);
 }
 .image-container h1 {
   padding-top: 20px;
